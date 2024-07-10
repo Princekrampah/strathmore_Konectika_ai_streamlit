@@ -147,7 +147,7 @@ if generate_btn:
 
     file_path = "./generated_html/generated_pdf.pdf"
     absolute_path = os.path.abspath(file_path)
-    print(absolute_path)
+    
 
     with open(absolute_path, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
@@ -158,8 +158,9 @@ if generate_btn:
                        mime='application/octet-stream')
 
 # rush testing, needs removing
-file_path = "../../generated_html/generated_pdf.pdf"
-
+# /mount/src/
+file_path = "./generated_html/generated_pdf.pdf"
+absolute_path = os.path.abspath(file_path)
 
 
 # Create modal
@@ -178,4 +179,4 @@ if view_pdf:
 
 if modal.is_open():
     with modal.container():
-        displayPDF(file_path, st)
+        displayPDF(absolute_path, st)
