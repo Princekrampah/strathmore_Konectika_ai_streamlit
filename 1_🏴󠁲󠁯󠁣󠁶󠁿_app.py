@@ -145,7 +145,7 @@ if generate_btn:
     time.sleep(30)
     st.success("CV generated successfully, you can download it!")
 
-    file_path = "./generated_pdf.pdf"
+    file_path = "./generated_html/generated_pdf.pdf"
     absolute_path = os.path.abspath(file_path)
     print(absolute_path)
 
