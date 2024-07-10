@@ -158,9 +158,8 @@ if generate_btn:
                        mime='application/octet-stream')
 
 # rush testing, needs removing
-# /mount/src/
 file_path = "../../generated_html/generated_pdf.pdf"
-absolute_path = os.path.abspath(file_path)
+
 
 
 # Create modal
@@ -179,4 +178,4 @@ if view_pdf:
 
 if modal.is_open():
     with modal.container():
-        displayPDF(absolute_path, st)
+        displayPDF(file_path, st)
