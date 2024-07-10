@@ -159,7 +159,7 @@ if generate_btn:
 
 # rush testing, needs removing
 # /mount/src/
-file_path = "./generated_html/generated_pdf.pdf"
+file_path = "../../generated_html/generated_pdf.pdf"
 absolute_path = os.path.abspath(file_path)
 
 
