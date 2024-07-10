@@ -3,6 +3,7 @@ from streamlit_modal import Modal
 import streamlit.components.v1 as components
 
 import time
+import os
 
 from utils.file_display.pdf_display import displayPDF
 
@@ -141,10 +142,14 @@ generate_btn = st.button("Generate CV")
 
 if generate_btn:
     st.warning("Generating CV, please wait...")
-    time.sleep(1)
+    time.sleep(30)
     st.success("CV generated successfully, you can download it!")
 
-    with open("../streamlit_app/generated_html/generated_pdf.pdf", "rb") as pdf_file:
+    file_path = "../streamlit_app/generated_html/generated_pdf.pdf"
+    absolute_path = os.path.abspath(file_path)
+    print(absolute_path)
+
+    with open(absolute_path, "rb") as pdf_file:
         PDFbyte = pdf_file.read()
 
     st.download_button(label="Download Generated CV",
@@ -152,6 +157,9 @@ if generate_btn:
                        file_name="test.pdf",
                        mime='application/octet-stream')
 
+# rush testing, needs removing
+file_path = "../streamlit_app/generated_html/generated_pdf.pdf"
+absolute_path = os.path.abspath(file_path)
 
 # Create modal
 modal = Modal(
@@ -162,11 +170,11 @@ modal = Modal(
     max_width=1000
 )
 
-view_pdf = st.button("View Generated CV", disabled=generate_btn)
+view_pdf = st.button("View Generated CV", disabled= (not generate_btn))
 
 if view_pdf:
     modal.open()
 
 if modal.is_open():
     with modal.container():
-        displayPDF("../streamlit_app/generated_html/generated_pdf.pdf", st)
+        displayPDF(absolute_path, st)
