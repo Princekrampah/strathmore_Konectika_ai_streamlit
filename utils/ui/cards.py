@@ -17,21 +17,21 @@ cards = [
         title="Skill I need",
         text="What is the skills I need for this job position?",
         image="https://images.pexels.com/photos/4348403/pexels-photo-4348403.jpeg?auto=compress&cs=tinysrgb&w=600",
-        url="http://localhost:8501/job_chat/?jobID=data_entry_clerk_001&prompt=what%20skills%20do%20I%20need%20for%20this%20job%3F",
+        url="https://strathmorekonectikaaiapp.streamlit.app/job_chat/?jobID=data_entry_clerk_001&prompt=what%20skills%20do%20I%20need%20for%20this%20job%3F",
         styles="border"
     ),
     card(
         title="What is this job about?",
         text="What will be my role doing this job?",
         image="https://images.pexels.com/photos/20875710/pexels-photo-20875710/free-photo-of-what-made-of-wooden-letters.jpeg?auto=compress&cs=tinysrgb&w=600",
-        url="http://localhost:8501/job_chat/?jobID=data_entry_clerk_001&prompt=what%20is%20this%20job%20about",
+        url="https://strathmorekonectikaaiapp.streamlit.app/job_chat/?jobID=data_entry_clerk_001&prompt=what%20is%20this%20job%20about",
         styles="border"
     ),
     card(
         title="Why This Job?",
         text="What are the importance of this job to me?",
         image="https://images.pexels.com/photos/12347774/pexels-photo-12347774.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        url="http://localhost:8501/job_chat/?jobID=data_entry_clerk_001&prompt=why%20this%20job%3F",
+        url="https://strathmorekonectikaaiapp.streamlit.app/job_chat/?jobID=data_entry_clerk_001&prompt=why%20this%20job%3F",
         styles="border"
     ),
     # Add more cards as needed
